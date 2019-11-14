@@ -5,26 +5,128 @@ date: "11/13/2019"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+## Descripción de lecturas crudas
+
+Ver la cantidad de secuencias en un archivo fastq comprimido.  
+
+```{r eval=FALSE}
+zcat XXXX.fastq.gz | grep -c "@NB5"
 ```
 
-## R Markdown
- 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### Para visualizar lecturas con terminación .gz
+    
+se enlista y se lleva a cabo una selección de los temas con la terminación .gz
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r eval=FALSE}
+    ls *.gz
+```
+### Conteo del número de secuencias que tiene cada archivo .gz
 
-```{r cars}
-summary(cars)
+Analizar el número de secuencias de cada archivo
+
+
+```{r eval=FALSE}
+   for i in $(ls *.gz); do zcat $i | grep -c "@NB5"; done
 ```
 
-## Including Plots
+### Análisis de las secuencias con Fastqc
 
-You can also embed plots, for example:
+Se crea un Scrip en vim que permite analizar los formatos .fastq 
+```{r eval=FALSE}
+           for i in $(ls *.fastq); do fastqc $i; done
+```    
+        
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+
