@@ -12,3 +12,4 @@ Ver la cantidad de secuuencias en un archivo fastq comprimido.
 ```{r eval=FALSE}
 zcat XXXX.fastq.gz | grep -c "@NB5"
 ```
+rgaegfadgdf
