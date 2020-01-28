@@ -28,7 +28,16 @@ Analizar el número de secuencias de cada archivo
 ```{r eval=FALSE}
    for i in $(ls *.gz); do zcat $i | grep -c "@NB5"; done
 ```
+Se comparó el número de secuencias que se tenian por librería y se observo que en las librerías EIAL2SS50, EIAL2SS51, EIAL2SS52, EIAL2SS55, EIAL2SS56, EIAL2SS57 no se encontraban las secuencias crudas. Al no saber como estaban dados los datos,Se volvieron a crear las secuencias crudas para todas las librerias concatenando los R1 y los R2. 
 
+
+###Concatenación de nuevas librerías 
+
+Para concatenar las nuevas librerías crudas se ocupo el comando zcat seguido de los nombres de la libreria que se deseaban ocupar (tomando en cuenta que las librerías con nomenclatura L002 se descarto para el analisis), posteriormente se le agregaba un (>) dando el nombre del archivo de salida que se desea obtener.
+
+```{r eval=FALSE} 
+zcat EIAL2SSXX_XX_L00X_RX_001.fastq.gz EIAL2SSXX_XX_L00X_RX_001.fastq.gz EIAL2SSXX_XX_L00X_RX_001.fastq.gz > EIAL2SSXX_RX_2.fastq 
+```
 ### Análisis de las secuencias con Fastqc
 
 Se crea un Scrip en vim que permite analizar los formatos .fastq 
