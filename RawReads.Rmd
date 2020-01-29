@@ -6,6 +6,7 @@ output: html_document
 ---
 
 ## Descripción de lecturas crudas
+<<<<<<< HEAD
 
 Ver la cantidad de secuencias en un archivo fastq comprimido.  
 
@@ -139,3 +140,12 @@ Se crea un Scrip en vim que permite analizar los formatos .fastq
     
       
 
+=======
+
+Ver la cantidad de secuuencias en un archivo fastq comprimido.  
+
+```{r eval=FALSE}
+zcat XXXX.fastq.gz | grep -c "@NB5"
+```
+rgaegfadgdfgllguoiuoutio
+>>>>>>> 63bfdfaf7f9ce1d5049bfca5caf880f328210559
