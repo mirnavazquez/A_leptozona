@@ -8,7 +8,7 @@ library(readxl)
 file.choose()
 
 # Copiar ruta de la consola y guardar en variable
-ruta_excel <- "C:\\Users\\GAIA\\Desktop\\AlesDEGDiciembre20.xlsx"
+ruta_excel <- "AlesDEGDiciembre20.xlsx"
 
 # como mirar las hojas de tu excel
 excel_sheets(ruta_excel)
@@ -21,6 +21,8 @@ excel_sheets(ruta_excel)
 genesunicos <- read_excel(ruta_excel,
                          sheet = "MaConcat",
                          range = "F1:F993")
+
+
 #unique nos permite analizar las veces que se repite un dato y te arroja solo 
 #los datos que se encuentran una sola ves en formato de tabla "Males"
 
