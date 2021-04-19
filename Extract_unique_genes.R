@@ -18,7 +18,8 @@ unigenes_3<-Females$unigenes_3
 all_females<-as_tibble(c(unigenes_1, unigenes_2, unigenes_3)) %>%
   drop_na()
 
-females_unique<-all_females %>%
+females_unique<-all_females
+rename(ID)%>%
   distinct()
 
 # Males -------------------------------------------------------------------####
